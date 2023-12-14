@@ -1,0 +1,7 @@
+site_name: "symbiose"
+nav:
+  - 'Getting Started': 'developer-manual/install-symbiose.md'
+  - 'User ':
+      - 'Account': 'user-manual/user-account.md'
+  - 'Developer':
+      - 'Package': 'developer-manual/package-description.md'
