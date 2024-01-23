@@ -9,7 +9,7 @@ Symbiose packages are meant to be used within [eQual framework](https://github.c
 
 ### Identity
 
-Manage the legal or natural person you do business.
+Manage the legal or natural person you do business with.
 
 ### Human resources
 
@@ -17,7 +17,7 @@ Manage your employees work contracts, holidays and absences.
 
 ### Finance
 
-Manage accounting and tax rules that will allow you to invoice products/services to you customers.
+Manage accounting and tax rules that will allow you to invoice products/services to your customers.
 
 ### Sale
 
