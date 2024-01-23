@@ -42,23 +42,27 @@ A time entry information can be divided in 2 parts:
     - unit price
     - receivable
 
+Duration, start and end times:
+* The modification of the duration automatically updates the end time
+* The modification of the start time and/or end time automatically updates the duration
+
 ## Actions
 
 ### Quick create
 
 Allows to quickly create a time entry from the list view, the new time entry can then be easily modified inline.
 
-| Where                | How                                            |
-|----------------------|------------------------------------------------|
-| Time entry list view | Click on the upper right button "QUICK CREATE" |
+| Where                  | How                                            |
+|------------------------|------------------------------------------------|
+| Time entries list view | Click on the upper right button "QUICK CREATE" |
 
 ### Create receivables
 
 Allows to generate time entries' receivables from the list view.
 
-| Where                | How                                                                                                                               |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Time entry list view | 1) Select the rows with the list row checkboxes <br/> 2) Click on upper left dropdown "X SELECTED" <br/> 3) Click on "Receivable" |
+| Where                  | How                                                                                                                               |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| Time entries list view | 1) Select the rows with the list row checkboxes <br/> 2) Click on upper left dropdown "X SELECTED" <br/> 3) Click on "Receivable" |
 
 ### Create receivable
 
@@ -66,4 +70,4 @@ Allows to generate a time entry's receivable from the form view.
 
 | Where                | How                                          |
 |----------------------|----------------------------------------------|
-| Time entry list form | Click on the upper right button "RECEIVABLE" |
+| Time entry form view | Click on the upper right button "RECEIVABLE" |
