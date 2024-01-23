@@ -1,5 +1,8 @@
 # Timetrack
 
+This package allows to record the time employees spend working for customers.
+Invoices can then be generated to bill customers per hour.
+
 ## Time entry
 
 A time entry records the duration of time an employee spent working on a task.
