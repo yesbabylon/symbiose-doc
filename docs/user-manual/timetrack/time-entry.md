@@ -5,22 +5,22 @@ It is an extension of a sale entry, so you can generate a receivable from it tha
 
 ## Details
 
-| Field       | Description                                                   | Value(s)                                 |
-|-------------|---------------------------------------------------------------|------------------------------------------|
-| description | Short description of the task                                 |                                          |
-| user        | User who handled the task                                     |                                          |
-| project     | Project the task relates to                                   |                                          |
-| origin      | Origin of the task                                            | backlog/email/support                    |
-| ticket      | If origin is support a ticket can be linked to the time entry |                                          |
-| ticket link | Computed from project.instance.url and ticket                 | {instance.url}/support/#/ticket/{ticket} |
-| date        | Date the task was handled                                     |                                          |
-| start       | Start time                                                    |                                          |
-| end         | End time                                                      |                                          |
-| duration    | Duration of time spent                                        | {hours}:{minutes} -> 01:30               |
-| product     | Catalog product                                               |                                          |
-| price       | Price                                                         |                                          |
-| unit price  | Per hour price                                                |                                          |
-| receivable  | Generated receivable to invoice customer                      |                                          |
+| Field       | Description                                               | Value(s)                                 |
+|-------------|-----------------------------------------------------------|------------------------------------------|
+| description | Short description what was done                           |                                          |
+| user        | User who realised this entry                              |                                          |
+| project     | Project the entry relates to                              |                                          |
+| origin      | Origin of the entry                                       | backlog/email/support                    |
+| ticket      | If origin is support a ticket can be linked to the  entry |                                          |
+| ticket link | Computed from project.instance.url and ticket             | {instance.url}/support/#/ticket/{ticket} |
+| date        | Date                                                      |                                          |
+| start       | Start time                                                |                                          |
+| end         | End time                                                  |                                          |
+| duration    | Duration of time spent                                    | {hours}:{minutes} -> 01:30               |
+| product     | Catalog product                                           |                                          |
+| price       | Price                                                     |                                          |
+| unit price  | Per hour price                                            |                                          |
+| receivable  | Generated receivable to invoice customer                  |                                          |
 
 A time entry information can be divided in 2 parts:
 
@@ -42,32 +42,21 @@ A time entry information can be divided in 2 parts:
     - unit price
     - receivable
 
-Duration, start and end times:
-* The modification of the duration automatically updates the end time
-* The modification of the start time and/or end time automatically updates the duration
+## Form
+
+The modification of the project automatically sets the customer.
+
+The modification of the duration automatically updates the end time.
+
+The modification of the start time or end time automatically updates the duration.
+
+When the origin and the project are selected a matching sale model is researched.
+If a sale model matches it will automatically fill in the time entry sale information: product, price and unit price.
 
 ## Actions
 
-### Quick create
-
-Allows to quickly create a time entry from the list view, the new time entry can then be easily modified inline.
-
-| Where                  | How                                            |
-|------------------------|------------------------------------------------|
-| Time entries list view | Click on the upper right button "QUICK CREATE" |
-
-### Create receivables
-
-Allows to generate time entries' receivables from the list view.
-
-| Where                  | How                                                                                                                               |
-|------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Time entries list view | 1) Select the rows with the list row checkboxes <br/> 2) Click on upper left dropdown "X SELECTED" <br/> 3) Click on "Receivable" |
-
-### Create receivable
-
-Allows to generate a time entry's receivable from the form view.
-
-| Where                | How                                          |
-|----------------------|----------------------------------------------|
-| Time entry form view | Click on the upper right button "RECEIVABLE" |
+| Name               | Description                                                                                                      | Where                  | How                                                                                                                               | Notes                                                                                     |
+|--------------------|------------------------------------------------------------------------------------------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Quick create       | Allows to quickly create a time entry from the list view. The new time entry can then be easily modified inline. | Time entries list view | Click on the upper right button "QUICK CREATE"                                                                                    |                                                                                           |
+| Create receivables | Allows to generate time entries' receivables from the list view.                                                 | Time entries list view | 1) Select the rows with the list row checkboxes <br/> 2) Click on upper left dropdown "X SELECTED" <br/> 3) Click on "Receivable" | Receivables are only created for billable time entries that do not have a receivable yet. |
+| Create receivable  | Allows to generate a time entry's receivable from the form view.                                                 | Time entry form view   | Click on the upper right button "RECEIVABLE"                                                                                      |                                                                                           |

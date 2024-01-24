@@ -44,7 +44,7 @@ else (no)
   endif
 endif
 
-:Time entry created;
+:Create time entry;
 
 stop
 
@@ -52,5 +52,6 @@ stop
 ```
 
 Notes:
-  - A **default** sale model is created by setting its origin but not linking it to any project.
-  - A **project** sale model is created by setting its origin and linking it to one or multiple projects.
+
+* A **default** sale model is created by setting its origin but not linking it to any project.
+* A **project** sale model is created by setting its origin and linking it to one or multiple projects.

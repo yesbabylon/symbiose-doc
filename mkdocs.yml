@@ -3,5 +3,19 @@ nav:
   - 'Getting Started': 'developer-manual/install-symbiose.md'
   - 'User ':
       - 'Account': 'user-manual/user-account.md'
+      - 'Timetrack':
+          - 'Summary': 'user-manual/timetrack/index.md'
+          - 'Time entry': 'user-manual/timetrack/time-entry.md'
+          - 'Project': 'user-manual/timetrack/project.md'
+          - 'Sale Model': 'user-manual/timetrack/time-entry-sale-model.md'
   - 'Developer':
       - 'Package': 'developer-manual/package-description.md'
+      - 'Timetrack':
+          - 'Summary': 'developer-manual/timetrack/index.md'
+          - 'Classes': 'developer-manual/timetrack/classes.md'
+          - 'Actions': 'developer-manual/timetrack/actions.md'
+          - 'Uml': 'developer-manual/timetrack/uml/objet-relational/index.md'
+plugins:
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers: 8

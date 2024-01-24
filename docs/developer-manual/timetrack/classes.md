@@ -24,3 +24,28 @@ This class extends sale\SaleEntry, this means that receivables can be generated 
 | unit_price           | float   | Unit price per hour                                                               |                                                |
 | receivable_id        | integer | Generated receivable                                                              |                                                |
 | has_receivable       | boolean | True if a receivable has been generated                                           |                                                |
+
+# Project
+
+## Properties
+
+| Property                   | Type      | Description                                            |
+|----------------------------|-----------|--------------------------------------------------------|
+| name                       | string    | Name of the project                                    |
+| description                | string    | Description of the project                             |
+| customer_id                | integer   | Customer the project concerns                          |
+| instance_id                | integer   | Instance the project is installed on                   |
+| time_entry_sale_models_ids | many2many | A project can be linked to one or multiple sale models |
+
+# Time entry sale model
+
+## Properties
+
+| Property     | Type      | Description                                                      |
+|--------------|-----------|------------------------------------------------------------------|
+| name         | string    | Name of the model                                                |
+| origin       | string    | Origin the new time entry need to match for the model apply      |
+| projects_ids | many2many | Projects the new time entry need to match for the model to apply |
+| product_id   | integer   | Product to apply on new time entry if it matches                 |
+| price_id     | integer   | Price to apply on new time entry if it matches                   |
+| unit_price   | float     | Unit price to apply on new time entry if it matches              |
