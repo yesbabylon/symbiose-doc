@@ -2,6 +2,42 @@
 
 ## Add subscription entry
 
+Create a new subscription entry for a subscription current period. Only one subscription entry can exist for a specific period of a subscription.
+
+A subscription entry is a sale entry, therefor it can be used to invoice to a customer.
+
+### Uml
+
+```puml
+@startuml
+
+start
+
+if (Does the given subscription exist?) then (yes)
+  if (Is it a customer subscription?) then (yes)
+    if (Does the subscription haven't an entry yet?) then (yes)
+      :Create subscription entry;
+    else(no)
+      stop
+    endif
+  else(no)
+    stop
+  endif
+else (no)
+  stop
+endif
+
+stop
+
+@enduml
+```
+
+### Params
+
+| Param | Type    | Required | Description     |
+|-------|---------|:--------:|-----------------|
+| id    | integer |    x     | Subscription id |
+
 ## Shift period
 
 This action shift the period of a subscription to the next one, it modifies *date_from* and *date_to* depending on the *duration*.
