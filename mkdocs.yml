@@ -40,4 +40,4 @@ nav:
           - 'Summary': 'developer-manual/timetrack/index.md'
           - 'Classes': 'developer-manual/timetrack/classes.md'
           - 'Actions': 'developer-manual/timetrack/actions.md'
-          - 'Uml': 'developer-manual/timetrack/uml/objet-relational/index.md'
+          - 'Uml': 'developer-manual/timetrack/uml.md'
