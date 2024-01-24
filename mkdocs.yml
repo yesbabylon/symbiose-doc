@@ -1,5 +1,31 @@
-site_name: "symbiose"
+site_name: 'Symbiose'
+docs_dir: docs
+repo_name: symbiose
+repo_url: https://github.com/yesbabylon/symbiose
+theme:
+  name: material
+  favicon: 'assets/img/favicon.png'
+  logo: 'assets/img/eq_logo.png'
+  feature:
+    tabs: true
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+  # 404 page
+  static_templates:
+    - 404.html
+extra_css:
+  - 'assets/css/extra.css'
+plugins:
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers: 8
 nav:
+  - 'Welcome':
+      - 'Symbiose': 'index.md'
+      - 'Release notes': 'welcome/release-notes.md'
+      - 'Contribution Guide': 'welcome/contribution-guide.md'
   - 'Getting Started': 'developer-manual/install-symbiose.md'
   - 'User ':
       - 'Account': 'user-manual/user-account.md'
@@ -9,13 +35,9 @@ nav:
           - 'Project': 'user-manual/timetrack/project.md'
           - 'Sale Model': 'user-manual/timetrack/time-entry-sale-model.md'
   - 'Developer':
-      - 'Package': 'developer-manual/package-description.md'
+      - 'Packages': 'developer-manual/package-description.md'
       - 'Timetrack':
           - 'Summary': 'developer-manual/timetrack/index.md'
           - 'Classes': 'developer-manual/timetrack/classes.md'
           - 'Actions': 'developer-manual/timetrack/actions.md'
           - 'Uml': 'developer-manual/timetrack/uml/objet-relational/index.md'
-plugins:
-  - plantuml:
-      puml_url: https://www.plantuml.com/plantuml/
-      num_workers: 8
