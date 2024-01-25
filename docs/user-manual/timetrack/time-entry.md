@@ -42,7 +42,7 @@ A time entry information can be divided in 2 parts:
     - unit price
     - receivable
 
-## Form
+## Modifications
 
 The modification of the project automatically sets the customer.
 

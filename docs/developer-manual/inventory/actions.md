@@ -2,9 +2,10 @@
 
 ## Add subscription entry
 
-Create a new subscription entry for a subscription current period. Only one subscription entry can exist for a specific period of a subscription.
+Create a new subscription entry for a subscription current period.
+A subscription entry can have only one entry per period.
 
-A subscription entry is a sale entry, therefor it can be used to invoice to a customer.
+A subscription entry is a sale entry, therefor it can be used to invoice a customer.
 
 ### Uml
 
@@ -15,9 +16,9 @@ start
 
 if (Does the given subscription exist?) then (yes)
   if (Is it a customer subscription?) then (yes)
-    if (Does the subscription haven't an entry yet?) then (yes)
+    if (Does the subscription have an entry yet?) then (no)
       :Create subscription entry;
-    else(no)
+    else(yes)
       stop
     endif
   else(no)
