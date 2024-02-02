@@ -10,6 +10,7 @@ This class extends sale\SaleEntry, this means that receivables can be generated 
 | detailed_description | string  | Detailed description of the entry                                                 |                                                |
 | project_id           | integer | Project the time entry concerns                                                   |                                                |
 | customer_id          | integer | Customer the time entry concerns                                                  |                                                |
+| status               | string  | Current status of the time entry                                                  | (pending, ready, validated, billed)            |
 | date                 | date    | Date on which the time entry was realised                                         |                                                |
 | time_start           | time    | Time when task was started                                                        |                                                |
 | time_end             | time    | Time when task was finished                                                       |                                                |

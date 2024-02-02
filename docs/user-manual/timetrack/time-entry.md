@@ -10,6 +10,7 @@ It is an extension of a sale entry, so you can generate a receivable from it tha
 | description | Short description what was done                           |                                          |
 | user        | User who realised this entry                              |                                          |
 | project     | Project the entry relates to                              |                                          |
+| status      | Current status of the entry                               | pending/ready/validated/billed           |
 | origin      | Origin of the entry                                       | backlog/email/support                    |
 | ticket      | If origin is support a ticket can be linked to the  entry |                                          |
 | ticket link | Computed from project.instance.url and ticket             | {instance.url}/support/#/ticket/{ticket} |
@@ -28,6 +29,7 @@ A time entry information can be divided in 2 parts:
     - description
     - user
     - project
+    - status
     - origin
     - ticket
     - ticket link
@@ -42,6 +44,24 @@ A time entry information can be divided in 2 parts:
     - unit price
     - receivable
 
+### Status workflow:
+
+A time entry has a status that can change following a workflow.
+The possible statuses are pending, ready, validated and billed.
+
+```puml
+@startuml
+
+(*) -r-> "Pending"
+"Pending" -r-> [ready  ] "Ready for validation"
+"Ready for validation" -r-> [refuse] "Pending"
+"Ready for validation" -r-> [validate] "Validated"
+"Validated" -r-> [bill] "Billed"
+"Billed" -r-> (*)
+
+@enduml
+```
+
 ## Modifications
 
 The modification of the project automatically sets the customer.
@@ -53,10 +73,12 @@ The modification of the start time or end time automatically updates the duratio
 When the origin and the project are selected a matching sale model is researched.
 If a sale model matches it will automatically fill in the time entry sale information: product, price and unit price.
 
+When status is updated to "billed" a receivable is created.
+
 ## Actions
 
-| Name               | Description                                                                                                      | Where                  | How                                                                                                                               | Notes                                                                                     |
-|--------------------|------------------------------------------------------------------------------------------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| Quick create       | Allows to quickly create a time entry from the list view. The new time entry can then be easily modified inline. | Time entries list view | Click on the upper right button "QUICK CREATE"                                                                                    |                                                                                           |
-| Create receivables | Allows to generate time entries' receivables from the list view.                                                 | Time entries list view | 1) Select the rows with the list row checkboxes <br/> 2) Click on upper left dropdown "X SELECTED" <br/> 3) Click on "Receivable" | Receivables are only created for billable time entries that do not have a receivable yet. |
-| Create receivable  | Allows to generate a time entry's receivable from the form view.                                                 | Time entry form view   | Click on the upper right button "RECEIVABLE"                                                                                      |                                                                                           |
+| Name               | Description                                                                                                      | Where                  | How                                                                                                                               | Notes                                                                                                                                                    |
+|--------------------|------------------------------------------------------------------------------------------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Quick create       | Allows to quickly create a time entry from the list view. The new time entry can then be easily modified inline. | Time entries list view | Click on the upper right button "QUICK CREATE"                                                                                    |                                                                                                                                                          |
+| Create receivables | Allows to generate time entries' receivables from the list view.                                                 | Time entries list view | 1) Select the rows with the list row checkboxes <br/> 2) Click on upper left dropdown "X SELECTED" <br/> 3) Click on "Receivable" | Receivables are only created for billable time entries that do not have a receivable yet.                                                                |
+| Update status      | Update the status of the time entry following the workflow                                                       | Time entry form view   | Click on the upper right button "READY" / "VALIDATE" / "REFUSE" / "BILL"                                                          | - READY is displayed if status is pending <br/> - VALIDATED and REFUSE are displayed if status is ready <br/> - BILL is displayed if status is validated |
