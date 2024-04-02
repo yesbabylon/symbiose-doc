@@ -30,7 +30,7 @@ package_name
 │   └── *
 │       └── *.json
 ├── manifest.json         
-├── config.inc.php
+├── config.json
 └── readme.md
 ```
 
