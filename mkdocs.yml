@@ -10,7 +10,7 @@ theme:
   favicon: 'assets/img/favicon.png'
   logo: 'assets/img/sb_logo.png'
   palette:
-    scheme: default
+    scheme: slate
   feature:
     tabs: true
   features:
