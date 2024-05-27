@@ -1,7 +1,10 @@
-site_name: 'Symbiose'
+site_name: Symbiose
+site_url: https://doc.symbiose.run/
 docs_dir: docs
+# dev_addr: 127.0.0.1:8000
 repo_name: symbiose
 repo_url: https://github.com/yesbabylon/symbiose
+edit_uri: ""
 theme:
   name: material
   favicon: 'assets/img/favicon.png'
@@ -18,9 +21,35 @@ theme:
 extra_css:
   - 'assets/css/extra.css'
 plugins:
-  - plantuml:
-      puml_url: https://www.plantuml.com/plantuml/
-      num_workers: 8
+  - search  
+  - mike:
+      canonical_version: null
+      version_selector: true
+      css_dir: css
+extra:
+  version:
+    provider: mike
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.details
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 nav:
   - 'Welcome':
       - 'Symbiose': 'index.md'
