@@ -36,6 +36,10 @@ nav:
           - 'Sale Model': 'user-manual/timetrack/time-entry-sale-model.md'
   - 'Developer':
       - 'Packages': 'developer-manual/package-description.md'
+      - 'Finance':
+          - 'Summary': 'developer-manual/finance/index.md'
+          - 'Classes': 'developer-manual/finance/classes.md'
+          - 'Uml': 'developer-manual/finance/uml.md'
       - 'Inventory':
           - 'Summary': 'developer-manual/inventory/index.md'
           - 'Classes': 'developer-manual/inventory/classes.md'
