@@ -29,6 +29,9 @@ plugins:
       canonical_version: null
       version_selector: true
       css_dir: css
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers: 8
 extra:
   version:
     provider: mike
