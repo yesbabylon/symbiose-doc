@@ -236,14 +236,6 @@ This package ables the use of documents for your application, with the possibili
 
 This package takes care of the accounting part of your application, everything that concerns `accounting, stats & tax`. 
 
-### controllers
-
-#### actions
-
-| **CONTROLLER**  | **ROLE**                    |
-|-----------------|-----------------------------|
-| invoice_do-emit | Sets contract as cancelled. |
-
 ## identity
 
 This package instantiates all the identities needed for the functioning of any business, ex: `Address, Establishment, Identity, IdentityType, Partner, User`.
