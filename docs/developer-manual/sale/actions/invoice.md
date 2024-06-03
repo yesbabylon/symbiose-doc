@@ -23,7 +23,7 @@ Display modes:
 
 ### Params
 
-| Param | Type     | Required | Description                        | Value(s)                |
-|-------|----------|:--------:|------------------------------------|-------------------------|
-| id    | integer  |    X     | Identifier of the targeted invoice |                         |
-| mode  | boolean  |          | Display mode                       | simple/detailed/grouped |
+| Param | Type     | Required | Description                        | Value(s)                    |
+|-------|----------|:--------:|------------------------------------|-----------------------------|
+| id    | integer  |    X     | Identifier of the targeted invoice |                             |
+| mode  | boolean  |          | Display mode                       | (simple, detailed, grouped) |
