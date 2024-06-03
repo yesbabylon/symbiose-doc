@@ -42,7 +42,7 @@ hide empty description
 [*] --> pending
 pending --> ready: request validation
 pending --> billed: bill
-ready --> validated: accept
+ready --> validated: validate
 ready --> pending: refuse
 validated --> billed: bill
 billed --> [*]
@@ -60,6 +60,6 @@ billed --> [*]
 **Transitions**:
 
 - **request validation**: Request approval of the entry.
-- **accept**: Accept the entry data, it can be billed.
+- **validate**: Validate the entry data, it can be billed.
 - **refuse**: Refuse the entry data, it needs some modifications.
 - **bill**: Bill from pending means that the validation process is not necessary. This transaction creates a receivable that can be invoiced to the customer.
