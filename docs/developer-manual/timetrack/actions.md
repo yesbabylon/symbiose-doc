@@ -2,19 +2,20 @@
 
 ## Quick create
 
-Create quickly a new time entry that is meant to be modified inline.
-The user (usually the authenticated one), project and the origin are the only needed data to create quickly a new time entry.
-
-To get the most of this feature, time entry sale models need to be configured.
-It will set the sale information of the created time entry.
+Create a new time entry for given project and set its status to ready for validation.
+The time entry end time will be set to the current time rounded to a quarter of an hour.
+If a _30 minutes_ entry is created at _14:07_ the start time will be _13:30_ and the end time will be _14:00_.
+The time is set according to the time zone setting.
 
 ### Params
 
-| Param      | Type     | Required | Description                       | Value(s)              |
-|------------|----------|:--------:|-----------------------------------|-----------------------|
-| user_id    | many2one |    x     | User that realised the time entry |                       |
-| project_id | many2one |    x     | Project the time entry concerns   |                       |
-| origin     | string   |    x     | Origin of the time entry          | backlog/email/support |
+| Param       | Type     | Required | Description                                                  | Value(s)                           |
+|-------------|----------|:--------:|--------------------------------------------------------------|------------------------------------|
+| project_id  | many2one |    x     | Project the time entry concerns                              |                                    |
+| origin      | string   |    x     | Origin of the time entry                                     | (project, backlog, email, support) |
+| reference   | string   |          | Reference completing the origin                              |                                    |
+| description | string   |    x     | Short description                                            |                                    |
+| duration    | time     |          | Task duration in seconds (default 900 seconds => 15 minutes) |                                    |
 
 ### Uml
 
@@ -25,20 +26,19 @@ start
 
 :Quick create;
 
-if (Does the given user exist?) then (yes)
+if (Is user authenticated?) then (yes)
   if (Does the given project exist?) then (yes)
-    if (Can a sale model be applied?) then (yes)
-      :Apply sale model;
-    else (no)
-    endif
+    :Compute entry start & end time according to time zone;
+  
+    :Create time entry;
+      
+    :Apply request-validation transition;
   else (no)
     stop
   endif
 else (no)
   stop
 endif
-
-:Create time entry;
 
 stop
 
