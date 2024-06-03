@@ -7,24 +7,24 @@ An internal subscription is used by your business, so it can't be invoiced to cu
 
 ### Properties
 
-| Property                 | Type     | Description                                | Value(s)                               |
-|--------------------------|----------|--------------------------------------------|----------------------------------------|
-| name                     | string   | Name of the subscription                   |                                        |
-| description              | string   | Information about a subscription           |                                        |
-| date_from                | date     | Start date of subscription                 |                                        |
-| date_to                  | date     | End date of subscription                   |                                        |
-| duration                 | string   | Type of the duration                       | (monthly,quarterly,half-yearly,yearly) |
-| is_auto_renew            | boolean  | The subscription is auto renew             |                                        |
-| is_expired               | boolean  | The subscription is expired                |                                        |
-| has_upcoming_expiry      | boolean  | The subscription is  upcoming expiry       |                                        |
-| ref_order                | string   | Subscription reference number              |                                        |
-| license_key              | string   | Subscription license key                   |                                        |
-| customer_id              | many2one | The Customer concerned by the subscription |                                        |
-| is_billable              | boolean  | Can be billed to the customer              |                                        |
-| product_id               | many2one | Product of the catalog sale                |                                        |
-| price_id                 | many2one | Price of the sale                          |                                        |
-| price                    | float    | Price of the subscription                  |                                        |
-| subscription_entries_ids | one2many | Subscription entries of the subscription   |                                        |
+| Property                 | Type     | Description                                | Value(s)                                  |
+|--------------------------|----------|--------------------------------------------|-------------------------------------------|
+| name                     | string   | Name of the subscription                   |                                           |
+| description              | string   | Information about a subscription           |                                           |
+| date_from                | date     | Start date of subscription                 |                                           |
+| date_to                  | date     | End date of subscription                   |                                           |
+| duration                 | string   | Type of the duration                       | (monthly, quarterly, half-yearly, yearly) |
+| is_auto_renew            | boolean  | The subscription is auto renew             |                                           |
+| is_expired               | boolean  | The subscription is expired                |                                           |
+| has_upcoming_expiry      | boolean  | The subscription is  upcoming expiry       |                                           |
+| ref_order                | string   | Subscription reference number              |                                           |
+| license_key              | string   | Subscription license key                   |                                           |
+| customer_id              | many2one | The Customer concerned by the subscription |                                           |
+| is_billable              | boolean  | Can be billed to the customer              |                                           |
+| product_id               | many2one | Product of the catalog sale                |                                           |
+| price_id                 | many2one | Price of the sale                          |                                           |
+| price                    | float    | Price of the subscription                  |                                           |
+| subscription_entries_ids | one2many | Subscription entries of the subscription   |                                           |
 
 ## Subscription Entry
 

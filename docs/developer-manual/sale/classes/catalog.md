@@ -8,29 +8,29 @@ A product model has at minimum one variant, which means at minimum one SKU.
 
 ### Properties
 
-| Property                   | Type      | Description                                                                             | Value(s)             |
-|----------------------------|-----------|-----------------------------------------------------------------------------------------|----------------------|
-| name                       | string    | Name of the product model (used for all variants)                                       |                      |
-| family_id                  | many2one  | Product Family which current product belongs to                                         |                      |
-| selling_accounting_rule_id | many2one  | Accounting rule to use in case of sell                                                  |                      |
-| buying_accounting_rule_id  | many2one  | Accounting rule to use in case of purchase                                              |                      |
-| stat_section_id            | many2one  | Statistics section to which relates the product, if any                                 |                      |
-| can_buy                    | boolean   | Can this product be purchased                                                           |                      |
-| can_sell                   | boolean   | Can this product be sold                                                                |                      |
-| is_pack                    | boolean   | Is the product a bundle of other products                                               |                      |
-| has_own_price              | boolean   | Has the pack its own price, or do we use each sub-product price                         |                      |
-| type                       | string    | Is the product a consumable or a service                                                | (consumable,service) |
-| consumable_type            | string    | Is the consumable product storable                                                      | (simple,storable)    |
-| service_type               | string    | Is the service product schedulable                                                      | (simple,schedulable) |
-| schedule_type              | string    | Is the service schedulable on a specific time or on a time range                        | (time,timerange)     |
-| schedule_default_value     | string    | Default value of the schedule according to type (time: '9:00', timerange: '9:00-10:00') |                      |
-| schedule_offset            | integer   | Default number of days to set-off the service from a sojourn start date                 |                      |
-| tracking_type              | string    | How is the stored consumable product tracked                                            | (none,batch,sku,upc) |
-| description_delivery       | string    | Description for delivery notes                                                          |                      |
-| description_receipt        | string    | Description for reception vouchers                                                      |                      |
-| groups_ids                 | many2many | Linked groups                                                                           |                      |
-| categories_ids             | many2many | Linked categories                                                                       |                      |
-| products_ids               | one2many  | Product variants that are related to this model                                         |                      |
+| Property                   | Type      | Description                                                                             | Value(s)                |
+|----------------------------|-----------|-----------------------------------------------------------------------------------------|-------------------------|
+| name                       | string    | Name of the product model (used for all variants)                                       |                         |
+| family_id                  | many2one  | Product Family which current product belongs to                                         |                         |
+| selling_accounting_rule_id | many2one  | Accounting rule to use in case of sell                                                  |                         |
+| buying_accounting_rule_id  | many2one  | Accounting rule to use in case of purchase                                              |                         |
+| stat_section_id            | many2one  | Statistics section to which relates the product, if any                                 |                         |
+| can_buy                    | boolean   | Can this product be purchased                                                           |                         |
+| can_sell                   | boolean   | Can this product be sold                                                                |                         |
+| is_pack                    | boolean   | Is the product a bundle of other products                                               |                         |
+| has_own_price              | boolean   | Has the pack its own price, or do we use each sub-product price                         |                         |
+| type                       | string    | Is the product a consumable or a service                                                | (consumable, service)   |
+| consumable_type            | string    | Is the consumable product storable                                                      | (simple, storable)      |
+| service_type               | string    | Is the service product schedulable                                                      | (simple, schedulable)   |
+| schedule_type              | string    | Is the service schedulable on a specific time or on a time range                        | (time, timerange)       |
+| schedule_default_value     | string    | Default value of the schedule according to type (time: '9:00', timerange: '9:00-10:00') |                         |
+| schedule_offset            | integer   | Default number of days to set-off the service from a sojourn start date                 |                         |
+| tracking_type              | string    | How is the stored consumable product tracked                                            | (none, batch, sku, upc) |
+| description_delivery       | string    | Description for delivery notes                                                          |                         |
+| description_receipt        | string    | Description for reception vouchers                                                      |                         |
+| groups_ids                 | many2many | Linked groups                                                                           |                         |
+| categories_ids             | many2many | Linked categories                                                                       |                         |
+| products_ids               | one2many  | Product variants that are related to this model                                         |                         |
 
 ## Product
 
