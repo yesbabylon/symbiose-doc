@@ -29,6 +29,9 @@ plugins:
       canonical_version: null
       version_selector: true
       css_dir: css
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers:
 extra:
   version:
     provider: mike
@@ -70,11 +73,16 @@ nav:
       - 'Packages': 'developer-manual/package-description.md'
       - 'Inventory':
           - 'Summary': 'developer-manual/inventory/index.md'
-          - 'Classes': 'developer-manual/inventory/classes.md'
-          - 'Actions': 'developer-manual/inventory/actions.md'
+          - 'Classes':
+              - 'Inventory': 'developer-manual/inventory/classes.md'
+              - 'Service': 'developer-manual/inventory/classes-service.md'
+              - 'Server': 'developer-manual/inventory/classes-server.md'
+          - 'Actions':
+            - 'Bulk Expiration': 'developer-manual/inventory/actions-bulkExpiration.md'
+            - 'Check Expiration': 'developer-manual/inventory/actions-checkExpiration.md'
           - 'Uml': 'developer-manual/inventory/uml.md'
       - 'Timetrack':
           - 'Summary': 'developer-manual/timetrack/index.md'
           - 'Classes': 'developer-manual/timetrack/classes.md'
-          - 'Actions': 'developer-manual/timetrack/actions.md'
+          - 'Actions': 'developer-manual/timetrack/actions-checkExpiration.md'
           - 'Uml': 'developer-manual/timetrack/uml.md'
