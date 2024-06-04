@@ -31,6 +31,41 @@
 
 This workflow ensures efficient management of sales and invoicing processes within the system, providing clarity and accountability at each stage of the transaction lifecycle.
 
+## Fundings
+
+Fundings are a crucial element of financial management and serve as a mechanism for managing payments and due dates for sales.
+
+They serve both to inform customers of expected amounts and to track payments received (or reimbursed), whether or not they are linked to specific invoices.
+
+Here are the key features of Fundings and Funding plans : 
+
+* **Communicating deadlines to customers:** Funding plans allow you to clearly communicate to customers the amounts to be paid and the associated due dates. This helps to improve transparency and avoid late payments.
+* **Tracking payments received:** Funding plans allow you to track payments received, whether or not they are linked to specific invoices. This facilitates account reconciliation and cash flow management.
+* **Managing split payments:** Funding plans can be used to manage split payments, which can be useful for large purchases or services spread over several months.
+* **Adaptability to various use cases:** Funding plans can be generated in different ways, including through funding plans, balance invoices, or manually. This allows them to be adapted to a variety of use cases.
+
+Fundings are meant to evolve over time (they can be modified and even deleted - as long as there is no associated payment).
+
+**Funding plans** are a kind of assistance to create a series of Fundings at a given time, based on conditions related to the object for which the Fundings are issued.
+
+
+
+Fundings can be generated:
+
+* via a funding plan
+* via a balance invoice
+* in an arbitrary manner (programmatically or manually)
+
+
+
+A distinction is made between:
+
+* "funding_plan": used for specific services (e.g. Reservations)
+* "payment_terms": used exclusively for invoices
+
+
+
+
 
 
 ## Time tracker
