@@ -12,7 +12,6 @@ This class extends sale\SaleEntry, this means that receivables can be generated 
 | time_start           | time     | Start time of the entry                                                                       |                                                |
 | time_end             | time     | End time of the entry                                                                         |                                                |
 | duration             | time     | Duration of the entry (from time start and time end)                                          |                                                |
-| qty                  | float    | Quantity in hours (from duration)                                                             |                                                |
 | user_id              | many2one | User the time entry was performed by                                                          |                                                |
 | origin               | string   | What the task performed is a response to                                                      | (project, backlog, email, support)             |
 | ticket_id            | integer  | Identifier of the support ticket                                                              |                                                |
@@ -27,6 +26,7 @@ This class extends sale\SaleEntry, this means that receivables can be generated 
 | product_id           | many2one | Product of the sale catalog (from project sale model)                                         |                                                |
 | price_id             | many2one | Price of the sale (from project sale model)                                                   |                                                |
 | unit_price           | float    | Unit price of the product related to the entry (from project sale model)                      |                                                |
+| qty                  | float    | Quantity in hours (from duration)                                                             |                                                |
 
 ### Workflow
 
