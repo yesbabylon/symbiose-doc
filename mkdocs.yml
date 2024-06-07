@@ -24,7 +24,7 @@ theme:
 extra_css:
   - 'assets/css/extra.css'
 plugins:
-  - search  
+  - search
   - mike:
       canonical_version: null
       version_selector: true
@@ -71,6 +71,28 @@ nav:
           - 'Sale Model': 'user-manual/timetrack/time-entry-sale-model.md'
   - 'Developer':
       - 'Packages': 'developer-manual/package-description.md'
+      - 'Finance':
+          - 'Summary': 'developer-manual/finance/index.md'
+          - 'Classes': 'developer-manual/finance/classes.md'
+          - 'Uml': 'developer-manual/finance/uml.md'
+      - 'Sale':
+          - 'Summary': 'developer-manual/sale/index.md'
+          - 'Classes':
+              - 'Catalog': 'developer-manual/sale/classes/catalog.md'
+              - 'Price': 'developer-manual/sale/classes/price.md'
+              - 'Customer': 'developer-manual/sale/classes/customer.md'
+              - 'Sale Entry': 'developer-manual/sale/classes/sale-entry.md'
+              - 'Receivable': 'developer-manual/sale/classes/receivable.md'
+              - 'Invoice': 'developer-manual/sale/classes/invoice.md'
+              - 'Subscription': 'developer-manual/sale/classes/subscription.md'
+              - 'Pay': 'developer-manual/sale/classes/pay.md'
+          - 'Actions':
+              - 'Sale Entry': 'developer-manual/sale/actions/sale-entry.md'
+              - 'Receivable': 'developer-manual/sale/actions/receivable.md'
+              - 'Receivable Queue': 'developer-manual/sale/actions/receivable-queue.md'
+              - 'Invoice': 'developer-manual/sale/actions/invoice.md'
+              - 'Subscription': 'developer-manual/sale/actions/subscription.md'
+          - 'Uml': 'developer-manual/sale/uml.md'
       - 'Inventory':
           - 'Summary': 'developer-manual/inventory/index.md'
           - 'Classes':
