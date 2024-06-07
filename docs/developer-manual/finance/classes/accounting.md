@@ -1,4 +1,4 @@
-# Finance
+# Accounting
 
 ## Invoice
 
@@ -82,17 +82,6 @@ invoice --> cancelled: cancel
 | description            | string   | Short description of the group (displayed on invoice) |          |
 | invoice_id             | many2one | Invoice the line is related to                        |          |
 | invoice_lines_ids      | one2many | Detailed lines of the group                           |          |
-
-## Vat Rule
-
-### Properties
-
-| Property       | Type     | Description                                               | Value(s)         |
-|----------------|----------|-----------------------------------------------------------|------------------|
-| name           | string   | Label of the group (displayed on invoice)                 |                  |
-| rate           | float    | Short description of the group (displayed on invoice)     |                  |
-| vat_rule_type  | string   | Kind of operation this rule relates to                    | (purchase, sale) |
-| account_id     | many2one | Account which the tax amount relates to                   |                  |
 
 ## Account Chart
 
@@ -199,27 +188,4 @@ invoice --> cancelled: cancel
 | is_locked         | boolean    | Can the section be updated                 |          |
 | label             | string     | The label of the section                   |          |
 | analytic_chart_id | many2one   | The chart of accounts the line belongs to. |          |
-
-## Stat Chart
-
-### Properties
-
-| Property          | Type        | Description                                  | Value(s) |
-|-------------------|-------------|----------------------------------------------|----------|
-| name              | alias       | Name of the chart of accounts                |          |
-| organisation_id   | many2one    | The organisation the chart belongs to        |          |
-| stat_sections_ids | one2many    | Sections that are related to this stat chart |          |
-
-## Stat Section
-
-### Properties
-
-| Property        | Type     | Description                                      | Value(s) |
-|-----------------|----------|--------------------------------------------------|----------|
-| name            | alias    | Name of the section of accounts (from code)      |          |
-| code            | string   | Unique code identifying the section              |          |
-| description     | string   | Short description of the section                 |          |
-| label           | string   | The label of the section                         |          |
-| stat_chart_id   | many2one | The stats chart the line belongs to              |          |
-
 
