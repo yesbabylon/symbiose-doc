@@ -14,9 +14,5 @@ A customer project categorizes the time entries, it is also used to apply specif
 
 ## Time entry sale model
 
-A sale model allows to automatically set the sale information of a new time entry.
-Its goal is to ease the creation of time entries.
-
-Each origin (backlog/email/support) can have a default sale model to apply on new time entries from that origin.
-Other sale models can be created by linking them to specific projects.
-A sale model with the same origin and project than the new time entry will be applied by priority.
+A sales model streamlines the process of creating time entries by automatically assigning sale information to each new entry.
+When a project is associated with a sales model, all time entries for that project will inherit the sale information based on the linked sales model.
