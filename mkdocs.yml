@@ -101,6 +101,7 @@ nav:
               - 'Server': 'developer-manual/inventory/classes/server.md'
           - 'Actions':
             - 'Subscription' : 'developer-manual/inventory/actions/subscription.md'
+          - 'Uml': 'developer-manual/inventory/uml.md'
       - 'Timetrack':
           - 'Summary': 'developer-manual/timetrack/index.md'
           - 'Classes': 'developer-manual/timetrack/classes.md'
