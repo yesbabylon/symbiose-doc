@@ -34,6 +34,9 @@ The Subscription entries describe the process of invoicing the client for the se
 ### Service
 The Service allows comprehensive management of services, facilitating billing, automatic renewal, association with products and clients, and linking with external and internal providers. Additionally, it documents specific details and manages related accesses and software.
 
+### Service  Model 
+The Service Model manages and organizes service models, their billing, subscriptions, and associations with providers.
+
 ### Service Provider
 The Service Provider extends the Supplier class and manages relevant information about the service provider, including login URL, provider category, and associated services.
 
