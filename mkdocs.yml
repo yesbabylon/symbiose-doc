@@ -96,15 +96,14 @@ nav:
       - 'Inventory':
           - 'Summary': 'developer-manual/inventory/index.md'
           - 'Classes':
-              - 'Inventory': 'developer-manual/inventory/classes.md'
-              - 'Service': 'developer-manual/inventory/classes-service.md'
-              - 'Server': 'developer-manual/inventory/classes-server.md'
+              - 'Inventory': 'developer-manual/inventory/classes/classes.md'
+              - 'Service': 'developer-manual/inventory/classes/service.md'
+              - 'Server': 'developer-manual/inventory/classes/server.md'
           - 'Actions':
-            - 'Bulk Expiration': 'developer-manual/inventory/actions-bulkExpiration.md'
-            - 'Check Expiration': 'developer-manual/inventory/actions-checkExpiration.md'
+            - 'Subscription' : 'developer-manual/inventory/actions/subscription.md'
           - 'Uml': 'developer-manual/inventory/uml.md'
       - 'Timetrack':
           - 'Summary': 'developer-manual/timetrack/index.md'
           - 'Classes': 'developer-manual/timetrack/classes.md'
-          - 'Actions': 'developer-manual/timetrack/actions-checkExpiration.md'
+          - 'Actions': 'developer-manual/timetrack/subscription.md'
           - 'Uml': 'developer-manual/timetrack/uml.md'

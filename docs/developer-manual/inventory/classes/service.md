@@ -32,22 +32,38 @@
 
 ### Properties
 
-| Property              | Type      | Description                                                      | Value(s) |
-|-----------------------|-----------|------------------------------------------------------------------|----------|
-| name                  | string    | Unique identifier of the service. (ex: Google API, mailtrap.io)  |          |
-| description           | string    | Information about a service                                      |          |
-| has_subscription      | boolean   | The service has a subscription                                   |          |
-| is_billable           | boolean   | The service is billable                                          |          |
-| is_auto_renew         | boolean   | The service is auto renew                                        |          |
-| product_id            | many2one  | The product to which the service belongs                         |          |
-| is_internal           | boolean   | The product of the service is internal (computed from Product)   |          |
-| customer_id           | many2one  | The customer associated with the product (computed from Product) |          |
-| has_external_provider | boolean   | The service has external provider                                |          |
-| service_provider_id   | many2one  | The service provider to which the service belongs                |          |
-| details_ids           | one2many  | List of details about the service                                |          |
-| subscriptions_ids     | one2many  | The subscriptions about the service belongs                      |          |
-| accesses_ids          | one2many  | Access to connect to the service                                 |          |
-| softwares_ids         | one2many  | Software associated with the service                             |          |
+| Property              | Type      | Description                                                                       | Value(s) |
+|-----------------------|-----------|-----------------------------------------------------------------------------------|----------|
+| name                  | string    | The label  of the service. (computed from Product and Service Model)              |          |
+| description           | string    | Information about a service                                                       |          |
+| has_subscription      | boolean   | The service has a subscription (computed from Product Model)                      |          |
+| is_billable           | boolean   | The service is billable (computed from Product Model)                             |          |
+| is_auto_renew         | boolean   | The service is auto renew (computed from Product Model)                           |          |
+| has_external_provider | boolean   | The service has external provider (computed from Product Model)                   |          |
+| service_provider_id   | many2one  | The service provider to which the service belongs (computed from Product Model)   |          |
+| product_id            | many2one  | The product to which the service belongs                                          |          |
+| is_internal           | boolean   | The product of the service is internal (computed from Product)                    |          |
+| customer_id           | many2one  | The customer associated with the product (computed from Product)                  |          |
+| details_ids           | one2many  | List of details about the service                                                 |          |
+| subscriptions_ids     | one2many  | The subscriptions about the service belongs                                       |          |
+| accesses_ids          | one2many  | Access to connect to the service                                                  |          |
+| softwares_ids         | one2many  | Software associated with the service                                              |          |
+
+
+## Service Model
+
+### Properties
+
+| Property              | Type      | Description                                                           | Value(s) |
+|-----------------------|-----------|-----------------------------------------------------------------------|----------|
+| name                  | string    | Unique identifier of the service model. (ex: Google API, mailtrap.io) |          |
+| description           | string    | Information about a service model                                     |          |
+| has_subscription      | boolean   | The service model has a subscription                                  |          |
+| is_billable           | boolean   | The service model is billable                                         |          |
+| is_auto_renew         | boolean   | The service model is auto renew                                       |          |
+| has_external_provider | boolean   | The service model has external provider                               |          |
+| service_provider_id   | many2one  | The service provider to which the service model belongs               |          |
+| services_ids          | one2many  | The list of services associated with the service model                |          |
 
 ## Service Provider
 
