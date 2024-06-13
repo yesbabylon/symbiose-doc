@@ -73,7 +73,10 @@ nav:
       - 'Packages': 'developer-manual/package-description.md'
       - 'Finance':
           - 'Summary': 'developer-manual/finance/index.md'
-          - 'Classes': 'developer-manual/finance/classes.md'
+          - 'Classes':
+              - 'Accounting': 'developer-manual/finance/classes/accounting.md'
+              - 'Tax ': 'developer-manual/finance/classes/tax.md'
+              - 'Statistics ': 'developer-manual/finance/classes/stats.md'
           - 'Uml': 'developer-manual/finance/uml.md'
       - 'Sale':
           - 'Summary': 'developer-manual/sale/index.md'
