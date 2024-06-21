@@ -65,7 +65,27 @@ A distinction is made between:
 
 
 
+## Invoices
+### Sales Invoice
 
+The total line amounts are debited to the customer account and credited to the sales and VAT accounts. For a credit note, the entries are reversed.
+
+The account is retrieved based on `product_id` > `accounting_rule_id` > `accounts` (allocation).
+
+In the case of an order, any down payments must be added (distinction between sales invoice and order invoice).
+
+### Order Invoice
+
+#### Down Payment Invoice
+
+To generate a down payment invoice:
+
+For payment in multiple parts, the invoices must necessarily be linked to an order.
+
+#### Balance Invoice
+
+* Same as a sales invoice (plus the invoice linked to the order).
+* Add any down payments.
 
 
 ## Time tracker
