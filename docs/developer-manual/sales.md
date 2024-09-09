@@ -85,6 +85,8 @@ The account is retrieved based on `product_id` > `accounting_rule_id` > `account
 
 In the case of an order, any down payments must be added (distinction between sales invoice and order invoice).
 
+
+
 ### Order Invoice
 
 #### Down Payment Invoice
@@ -98,6 +100,19 @@ For payment in multiple parts, the invoices must necessarily be linked to an ord
 * Same as a sales invoice (plus the invoice linked to the order).
 * Add any down payments.
 
+
+
+
+### Credit notes
+
+Credit notes are accounting documents used to cancel certain invoices that should not have been issued or that were issued incompletely.
+
+The operational logic of credit notes is as follows:
+Credit notes are used to cancel invoices when necessary. It is not possible to issue arbitrary credit notes, and there is always a one-to-one link between a credit note and an invoice.
+
+As a result:
+* if canceled, an invoice must have one and only one credit note
+* a credit note is always associated with an invoice (the one it corresponds to the cancellation of)
 
 
 
