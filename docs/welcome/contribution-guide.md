@@ -28,7 +28,7 @@ Ambiguous properties are prefixed with the entity name (if the entity name has m
 
 Ambiguous property names are those:
 * that have a language meaning (PHP, JS, ...): class, default, interface, public, ...
-* that are used in field descriptors (except for `description`): type, usage, default, required, store, function
+* ###### that are used in field descriptors (except for `description`): type, usage, default, required, store, function
 * that have a specific meaning in view descriptors: layout, sections, mode, groups, items, ...
 * that point to a class having the same basename that another field (e.g., product_id => inventory_product_id or catalog_product_id)
 * some field can have a special meaning and must be kept ambiguous : name, code, order, date

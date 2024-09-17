@@ -59,7 +59,6 @@ markdown_extensions:
 nav:
   - 'Welcome':
       - 'Symbiose': 'index.md'
-      - 'Release notes': 'welcome/release-notes.md'
       - 'Contribution Guide': 'welcome/contribution-guide.md'
   - 'Getting Started': 'developer-manual/install-symbiose.md'
   - 'User ':
