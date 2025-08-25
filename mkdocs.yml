@@ -29,9 +29,10 @@ plugins:
       canonical_version: null
       version_selector: true
       css_dir: css
-  - plantuml:
-      puml_url: https://www.plantuml.com/plantuml/
-      num_workers:
+# memo - not supported with current docker image      
+#  - plantuml:
+#      puml_url: https://www.plantuml.com/plantuml/
+#      num_workers:
 extra:
   version:
     provider: mike
